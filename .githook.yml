@@ -41,6 +41,7 @@ parameters:
     type: number
   test:
     title: Test
+    description: "here is my description"
     type: boolean
   url:
     title: URL
