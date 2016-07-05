@@ -35,17 +35,17 @@ parameters:
       - Beef
       - Chicken
       - Vegetable
-    age:
-      title: Age
-      description: Age
-      type: number
-    test:
-      title: Test
-      type: boolean
-    url:
-      title: URL
-      description: Some url
-      type: url
+  age:
+    title: Age
+    description: Age
+    type: number
+  test:
+    title: Test
+    type: boolean
+  url:
+    title: URL
+    description: Some url
+    type: url
 
 # optional
 tags:
