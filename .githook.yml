@@ -1,6 +1,53 @@
-not valid yaml
+title:       Hello World
+version:     0.1.0
+description: "This is my description of my Hello World application."
+thumbnail:   http://path/to/thumbnail.jpg # optional. Defaults to your user avatar.
 
-{
-hi
+# relative to the root
+entry_point: hello-world.js
 
-}
+# specify the language your GitHook is written in (currently only node_js is supported)
+language: node_js
+
+# require at least one event to trigger the GitHook. See 'Events' below.
+triggered_on:
+  - push
+
+# optional. Add as many scopes as required. See 'Scopes' below.
+# Note that 'admin:repo_hook' will always be available (since it is required by GitHooks.io to properly manage GitHook installations) - but you should still specify it if you need it, just to be safe.
+scopes_required:
+  - 'user:email'
+
+# optional - see "Parameterised GitHooks" below
+parameters:
+  'my_parameter_name':
+    title:       Name
+    description: Who am I greeting?
+    # options: 'string', 'url', 'number', 'boolean', 'select'. default: 'string'
+    type:        string
+    # options: 'yes', 'no'. default: 'no'
+    required:    no
+  'curry_flavour':
+    title:       Curry flavour
+    description: What are you eating?
+    type:        select
+    values: # only valid for `select` type. First provided option will be the default
+      - Beef
+      - Chicken
+      - Vegetable
+    age:
+      title: Age
+      description: Age
+      type: number
+    test:
+      title: Test
+      type: boolean
+    url:
+      title: URL
+      description: Some url
+      type: url
+
+# optional
+tags:
+  - something
+  - something-else
