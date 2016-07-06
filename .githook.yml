@@ -39,6 +39,7 @@ parameters:
     title: Age
     description: Age
     type: number
+    required: yes
   test:
     title: Test
     description: "here is my description"
